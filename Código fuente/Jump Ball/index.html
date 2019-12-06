@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Jump Ball</title>
+    <meta charset="utf-8">
+    <!--     <script type="text/javascript" src="../libs/three.min.js"></script> -->
+    <!-- Se usa la version de three que viene con physijs -->
+    <script type="text/javascript" src="../physijs/examples/js/three.min.js"></script>
+    <script type="text/javascript" src="../physijs/physi.js"></script>
+    <!-- Todo lo demás igual -->
+    <script type="text/javascript" src="../libs/jquery.js"></script>
+    <script type="text/javascript" src="../libs/TrackballControls.js"></script>
+    <script type="text/javascript" src="./Elementos/Ball.js"></script>
+    <script type="text/javascript" src="./Elementos/enemigoBasico.js"></script>
+    <script type="text/javascript" src="./Elementos/rampas.js"></script>
+    <script type="text/javascript" src="./Elementos/LiveUp.js"></script>
+    <script type="text/javascript" src="./Elementos/obstaculos.js"></script>
+    <script type="text/javascript" src="./Elementos/muros_limite.js"></script>
+    <script type="text/javascript" src="./Elementos/fuego.js"></script>
+    <script type="text/javascript" src="../libs/Tween.js"></script>
+    <script type="text/javascript" src="MyPhysiScene.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        img {
+            width: 33px;
+            height: 33px;
+        }
+
+        #instructions {
+
+            position: absolute;
+
+            background-color: rgba(0, 0, 0, 0.8);
+
+            width: 100%;
+            height: 100%;
+
+            display: -webkit-box;
+            display: -moz-box;
+            display: box;
+
+            -webkit-box-orient: horizontal;
+            -moz-box-orient: horizontal;
+            box-orient: horizontal;
+
+            -webkit-box-pack: center;
+            -moz-box-pack: center;
+            box-pack: center;
+
+            -webkit-box-align: center;
+            -moz-box-align: center;
+            box-align: center;
+
+            color: #ffffff;
+            text-align: center;
+
+            cursor: pointer;
+        }
+
+        #win {
+
+            position: absolute;
+
+            background-color: rgba(0, 0, 0, 0.8);
+
+            width: 100%;
+            height: 100%;
+
+            display: -webkit-box;
+            display: -moz-box;
+            display: box;
+
+            -webkit-box-orient: horizontal;
+            -moz-box-orient: horizontal;
+            box-orient: horizontal;
+
+            -webkit-box-pack: center;
+            -moz-box-pack: center;
+            box-pack: center;
+
+            -webkit-box-align: center;
+            -moz-box-align: center;
+            box-align: center;
+
+            color: #ffffff;
+            text-align: center;
+
+            display: none;
+
+            cursor: pointer;
+        }
+
+        #contadorVidas {
+            position: absolute;
+            padding: 5px;
+            width: 150px;
+            height: 50px;
+
+        }
+
+        #WebGl-output {
+            cursor: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="instructions">
+
+        (⬅, ➡ = Move, SPACE = Jump)
+        <br>
+        <br>
+        BE CAREFUL WITH ENEMIES
+        <br>
+        <br>
+        BLUE PLATFORM DRIVE YOU
+        <br>
+        <br>
+        CLICK to start
+        <br>
+
+    </div>
+
+    <div id="win">
+
+        ¡ENHORABUENA!
+        <br>
+        <br>
+        Has ganado
+        <br>
+
+
+    </div>
+
+    <div id="contadorVidas">
+        <img src='../imgs/corazon.png' />
+        <img src='../imgs/corazon.png' />
+        <img src='../imgs/corazon.png' />
+    </div>
+    <!-- Div which will hold the Output -->
+    <div id="WebGL-output">
+    </div>
+</body>
+
+</html>
